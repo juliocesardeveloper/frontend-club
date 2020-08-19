@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700&display=swap");
+body {
+  margin: 0 30px;
+  padding: 0;
+  background-color: #464A5A;
+  font-family: "Mulish", sans-serif;
+  color: #DED8D5;
+}
+
+header {
+  height: 100px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  height: 80px;
+  margin: 10px 0 0 30px;
+}
+
+header a {
+  color: #DED8D5;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #F7AC1B;
+  text-decoration: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-gap: 3rem;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 700px;
+}
+
+.main-section__img {
+  background-color: #DED8D5;
+  justify-self: flex-start;
+  align-self: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.main-section__info {
+  padding-left: 30px;
+}
+
+#mapa {
+  padding: 30px 0;
+  width: 100%;
+  height: 700px;
+}
+
+footer {
+  height: 80px;
+  display: flex;
+  place-content: center;
+  position: block;
+}
+
+@media (max-width: 700px) {
+  body {
+    margin: 0;
+  }
+
+  header {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 100px;
+    grid-gap: 5px;
+  }
+
+  .main-section {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+    width: auto;
+    height: auto;
+    grid-row: 2/-1;
+  }
+
+  #mapa {
+    width: 100%;
+    height: 400px;
+  }
+
+  .main-section__info p {
+    margin: 0;
+  }
+
+  .main-section__info h3 {
+    margin: 10px 0;
+  }
+}
