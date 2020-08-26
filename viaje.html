@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="viaje.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
-  <title>Document</title>
+  <title>Viaje</title>
 </head>
 <body>
   <section>
@@ -21,19 +21,17 @@
     <div id="mapa">
     </div>
     <main>
-      <div class="main-avatar"></div>
-      <div class="main-info">
-        <h3>Nombre</h3>
-        <p>1 cosa</p>
-        <p>2 cosa</p>
-        <p>3 cosa</p>
-      </div>
+      <form action="">
+        <input class="input" type="text" name="Origen" id="" placeholder="¿Dónde estás?">
+        <input class="input" type="text" name="Destino" id="" placeholder="¿A dónde vas?">
+        <input class="button" type="submit" value="Viajar">
+      </form>
     </main>
     <footer>
       <p>club | by M4A Devs | 2020</p>
     </footer>
   </section>
-  
+
   <script>
     var mymap = L.map('mapa').setView([51.505, -0.09], 13);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
