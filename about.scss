@@ -1,0 +1,96 @@
+$color-fuente-oscura: #21242C;
+$color-realce: #F7AC1B;
+$color-fuente-clara: #FFF;
+$color-fondo-body: #DED8D5;
+$color-fondo-oscuro: #464A5A;
+$fuente-titulos: 'Mulish', sans-serif;
+$fuente-parrafos: 'Roboto', sans-serif;
+
+$altura-fuente: 14px;
+$breakpoint-phone: 416px;
+$breakpoint-tablet: 769px;
+
+
+@media (max-width: $breakpoint-phone){
+    
+    body{
+        background-color: $color-fondo-body;
+        box-sizing: border-box;
+        padding: 0;
+        margin:0;
+        font-size: $altura-fuente;
+    }
+    
+    header{
+        background-color: $color-fondo-oscuro;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 10% 1fr 15%;
+        align-items: center;
+        justify-items: center;
+        height: 60px;
+    }
+    .logo{
+        width: 30px;
+    }
+   
+
+    h1{
+        font-family: $fuente-titulos;
+        color: $color-fuente-clara;
+        font-weight: 300;
+        margin: 0;
+        justify-self: left;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        max-height: calc(100vh - 60px)
+    }
+    
+    .principal{
+        display: grid;
+        height: calc(100vh - 60px);
+        align-items: end;
+    }
+
+    .epic{
+        width: 100vw;
+    }
+    .avatar{
+        width: 160px;
+    }
+
+    .julio, .johan, .daniel, .omar{
+        height: 50vh;
+        align-content: center;
+    }
+
+    .team{
+        display: grid;
+    }
+    .rrss{
+        display: flex;  
+        justify-content: space-evenly;
+    }
+
+    h2{
+        font-family: $fuente-titulos;
+        color: $color-fondo-oscuro;
+        padding: 5%;
+        margin: 0;
+    }
+
+    p{
+        font-family: $fuente-parrafos;
+        color: $color-fuente-oscura;
+        padding: 5% 10%;
+        line-height: 1.7em;
+        margin: 0;
+    }
+}
