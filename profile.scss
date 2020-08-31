@@ -1,0 +1,84 @@
+$color-fuente-oscura: #21242C;
+$color-realce: #F7AC1B;
+$color-fuente-clara: #FFF;
+$color-fondo-body: #DED8D5;
+$color-fondo-oscuro: #464A5A;
+$fuente-titulos: 'Mulish', sans-serif;
+$fuente-parrafos: 'Roboto', sans-serif;
+
+$altura-fuente: 14px;
+$breakpoint-phone: 416px;
+$breakpoint-tablet: 769px;
+
+
+@media (max-width: $breakpoint-phone){
+    
+    body{
+        background-color: $color-fondo-body;
+        box-sizing: border-box;
+        padding: 0;
+        margin:0;
+        font-size: $altura-fuente;
+    }
+    
+    header{
+        background-color: $color-fondo-oscuro;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 10% 1fr 15%;
+        align-items: center;
+        justify-items: center;
+        height: 60px;
+    }
+    .logo{
+        width: 30px;
+    }
+   
+
+    h1{
+        font-family: $fuente-titulos;
+        color: $color-fuente-clara;
+        font-weight: 300;
+        margin: 0;
+        justify-self: left;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        max-height: calc(100vh - 60px)
+    }
+    .user-profile{
+        padding: 10px 0;
+    }
+
+    h2{
+        font-family: $fuente-titulos;
+        color: $color-fondo-oscuro;
+        margin: 10px 0;
+    }
+
+    p{
+        font-family: $fuente-parrafos;
+        color: $color-fuente-oscura;
+    }
+
+    button{
+        // align-self: start;
+        width: 300px;
+        height: 40px;
+        left: 29px;
+        top: 554px;
+        background: #F7AC1B;
+        opacity: 0.6;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        font-family: $fuente-parrafos;
+        font-weight: 5  00;
+        font-size: 1.2em;
+    }
+}
