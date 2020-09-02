@@ -1,22 +1,41 @@
 import React from 'react';
 
-import './Trip.css';
+import './styles/Trip.css';
 
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
 class Trip extends React.Component {
+  data = [];
+  state={};
+  handleChange = e => {
+    // console.log({ name: e.target.name, value: e.target.value });
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  handleClick = e => {
+    console.log('Button was clicked');
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.data.push(this.state);
+    console.log(this.data);
+  };
+
   render() {
     return (
       <>
-        <section>
+        <section className="trip-section">
           <Header />
           <div id="mapa"></div>
-          <main>
-            <form action="">
-              <input class="input" type="text" name="Origen" id="" placeholder="¿Dónde estás?"/>
-              <input class="input" type="text" name="Destino" id="" placeholder="¿A dónde vas?"/>
-              <input class="button" type="submit" value="Viajar"/>
+          <main className="trip-main main-info">
+            <form className="trip-form" onSubmit={this.handleSubmit}>
+              <input onChange={this.handleChange} className="input-trip" type="text" name="origin" id="" placeholder="¿Dónde estás?" value={this.state.origin}/>
+              <input onChange={this.handleChange} className="input-trip" type="text" name="destination" id="" placeholder="¿A dónde vas?" value={this.state.destination}/>
+              <input onClick={this.handleClick} className="button-trip" type="submit" value="Viajar"/>
             </form>
           </main>
           <Footer />

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import TripReady from './pages/TripReady';
+import App from './components/App';
 
 const container = document.getElementById('root');
 
 ReactDOM.render(
-  <TripReady />, container
+  <App />, container
 );

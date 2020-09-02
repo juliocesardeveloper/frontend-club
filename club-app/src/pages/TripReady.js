@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './TripReady.css';
+import './styles/TripReady.css';
 
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';

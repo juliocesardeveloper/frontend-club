@@ -1,23 +1,26 @@
 import React from 'react';
 
 import backBtn from '../assets/images/icono-atras-50.png';
-import './Login.css';
+
+import { Link } from 'react-router-dom';
+
+import './styles/Login.css';
 
 
 class SignUp extends React.Component {
   render() {
     return (
       <>
-        <section class="card" >
-          <a href=""><img src={ backBtn } alt=""/></a>
+        <section className="card login-section" >
+          <Link to="/"><img src={ backBtn } alt=""/></Link>
           <h1>Login</h1>
           <form action="">
-            <input class="input" type="text" name="Usuario" id="" placeholder="Nombre de usuario"/>
-            <input class="input" type="password" name="" id="" placeholder="Password"/>
-            <input class="button" type="button" value="Login"/>
+            <input className="input" type="text" name="Usuario" id="" placeholder="Nombre de usuario"/>
+            <input className="input" type="password" name="" id="" placeholder="Password"/>
+            <input className="button" type="button" value="Login"/>
           </form>
           <p>Ingresa con <a href="http://"><b>Facebook</b></a>  o <a href="http://"><b>Google</b></a></p>
-          <p>¿No tienes cuenta? Regístrate<a href=""><b>aquí</b></a></p>
+          <p>¿No tienes cuenta? Regístrate<Link to="/signup"><b>aquí</b></Link></p>
         </section>
       </>
     );

@@ -1,13 +1,13 @@
 import React from 'react';
 
-import './TripInfo.css';
+import './styles/TripInfo.css';
 
 
 class TripInfo extends React.Component {
   render() {
     return (
       <>
-        <section class="card" >
+        <section class="card trip-info-section" >
           <a href=""><img src="./assets/icono-atras-50.png" alt=""/></a>
           <h1>Datos de tu viaje</h1>
           <div class="datos-viaje">

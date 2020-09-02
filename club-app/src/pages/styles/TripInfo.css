@@ -6,16 +6,17 @@ body {
   align-items: center;
   margin: 0 30px;
   padding: 0;
-  background-color: #464A5A;
+  background-color: #DED8D5;
   font-family: "Mulish", sans-serif;
   color: #DED8D5;
 }
-section {
+.trip-info-section {
+  background-color: #464A5A;
   display: grid;
   grid-template-rows: 10% 20% 70%;
   width: 360px;
   height: 640px;
-  border: 2px solid #CCC;
+  border-radius: 1.5rem;
 }
 
 .card {
@@ -40,7 +41,7 @@ section {
 }
 
 .datos-viaje {
-  
+
 }
 .datos-viaje h3 {
   margin-top: 0;
