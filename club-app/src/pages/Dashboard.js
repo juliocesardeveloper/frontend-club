@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Map from '../components/Map';
-import { Footer } from '../components/Footer';
 import './styles/Dashboard.css';
+import {Header} from '../components/Header';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 
 
@@ -75,7 +75,8 @@ class Dashboard extends Component {
         <div className="Dashboard-container">
           <div className="Dashboard-form">
             <div className="Dashboard-header">
-              <h2>Haz un viaje</h2>
+              <Header />
+              <h2>Viaje</h2>
             </div>
             <PlacesAutocomplete
               value={originValue}
@@ -155,8 +156,6 @@ class Dashboard extends Component {
               />)
             }
           </div>
-          
-          <Footer />
         </div>
       </div>
     )

@@ -1,5 +1,6 @@
 .footer {
   display: flex;
-  place-content: center;
+  justify-self: center;
+  align-self: flex-end;
   position: block;
 }

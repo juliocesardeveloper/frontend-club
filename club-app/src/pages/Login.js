@@ -17,9 +17,7 @@ class SignUp extends React.Component {
           <form action="">
             <input className="input" type="text" name="Usuario" id="" placeholder="Nombre de usuario"/>
             <input className="input" type="password" name="" id="" placeholder="Password"/>
-            <Link to="/dashboard" >
-              <input className="button" type="button" value="Login"/>
-            </Link>
+            <input className="button" type="button" value="Login" />
           </form>
           <p>Ingresa con <a href="http://"><b>Facebook</b></a>  o <a href="http://"><b>Google</b></a></p>
           <p>¿No tienes cuenta? Regístrate<Link to="/signup"><b>aquí</b></Link></p>

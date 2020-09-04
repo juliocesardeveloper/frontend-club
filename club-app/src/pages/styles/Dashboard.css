@@ -11,7 +11,7 @@ body {
   color: #DED8D5;
 }
 
-.Dashboard-container {
+.Dashboard {
   background-color: #464A5A;
   display: grid;
   grid-template-rows: 10% 40% 20% 10%;
@@ -20,13 +20,13 @@ body {
   border-radius: 1.5rem;
 }
 
-.Dashboard-form {
-  margin: 0 1rem;
+.Dashboard-header h2 {
+  margin: 10px 30px 5px 30px;
 }
 
 .location-search-input {
   background-color: #464A5A;
-  margin: 5px 0;
+  margin: 10px 30px;
   width: 80%;
   border: none;
   border-bottom: 2px solid #5B5F6E;

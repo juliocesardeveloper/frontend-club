@@ -68,6 +68,8 @@ body {
 .input:focus {
   border-bottom: 2px solid #F7AC1B;
 }
+
+
 .button {
   background-color: #21242C;
   color: #DED8D5;
