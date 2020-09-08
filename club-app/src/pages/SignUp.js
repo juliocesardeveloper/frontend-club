@@ -3,29 +3,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import backBtn from '../assets/images/icono-atras-50.png';
+import { saveUser } from '../services/index';
 import './styles/SignUp.css';
 
 
 class SignUp extends React.Component {
   data = [];
-  state={
-    userName: ''
-  };
-  handleChange = e => {
-    // console.log({ name: e.target.name, value: e.target.value });
+  state={};
+  handleChange = event => {
     this.setState({
-      [e.target.name]: e.target.value
+      [event.target.name]: event.target.value
     });
   };
 
-  handleClick = e => {
+  handleClick = event => {
     console.log('Button was clicked');
+    
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
+  handleSubmit = event => {
+    event.preventDefault();
+    saveUser(this.data)
     this.data.push(this.state);
-    console.log(this.data);
+    // console.log(JSON.stringify(this.data, null, 2));
   };
 
 
@@ -49,10 +49,19 @@ class SignUp extends React.Component {
               onChange={this.handleChange}
               className="input"
               type="text"
-              name="completeName"
+              name="firstName"
               // id=""
-              placeholder="Tu nombre completo"
-              value={this.state.completeName}
+              placeholder="Tu nombre"
+              value={this.state.firstName}
+            />
+            <input
+              onChange={this.handleChange}
+              className="input"
+              type="text"
+              name="lastName"
+              // id=""
+              placeholder="Tu apellido"
+              value={this.state.lastName}
             />
             <input
               onChange={this.handleChange}
